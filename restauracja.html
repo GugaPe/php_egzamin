@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -24,23 +24,23 @@
         </ol>
       </div>
     </div>
-    <div class="panel_dolny">
+    <form class="panel_dolny" action="rezerwacje.php" method="POST">
       <h2>Zarezerwuj stolik on-line</h2>
-      <div class="form">
-        <p>Data (format rrrr-mm-dd):</p>
-        <input type="text" />
-        <p>Ile osób?</p>
-        <input type="number" />
-        <p>Twój numer telefonu</p>
-        <input type="text" />
-        <div class="dane_osobowe">
-          <input type="checkbox" />
-          <p>Zgadzam się na przetwarzanie moich danych osobowych</p>
-        </div>
-        <button type="submit">WYCZYŚĆ</button>
-        <button type="submit">REZERWUJ</button>
+      <p>Data (format rrrr-mm-dd):</p>
+      <!-- label zamiast p -->
+      <input type="text" name="data_rez" id="data_rez" />
+      <p>Ile osób?</p>
+      <input type="number" name="liczba_osob" id="liczba_osob" />
+      <p>Twój numer telefonu</p>
+      <input type="text" name="telefon" id="telefon" />
+      <div class="dane_osobowe">
+        <input type="checkbox" />
+        <p>Zgadzam się na przetwarzanie moich danych osobowych</p>
       </div>
-    </div>
-    <div class="stopka">Stronę internetową opracował:</div>
+      <input type="reset" placeholder="WYCZYŚĆ" />
+      <input type="submit" placeholder="REZERWUJ" />
+    </form>
+    <div class="stopka">Stronę internetową opracował: <i>00000000000</i></div>
+    <!-- italic =pochylenie -->
   </body>
 </html>
