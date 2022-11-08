@@ -1,17 +1,19 @@
-DROP DATABASE IF EXISTS baza;
+DROP DATABASE IF EXISTS baza2;
 
-CREATE DATABASE baza;
+CREATE DATABASE baza2;
+
+USE baza2;
 
 CREATE TABLE Reservation(
-    id int AUTO_INCREMENT NOTNULL PRIMARY KEY,
-    restaurant_table_id int FOREIGN KEY REFERENCES Restaurant_Table(id)
+    id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    restaurant_table_id int FOREIGN KEY REFERENCES Restaurant_Table(id),
     phone_number VARCHAR(12),
     date DATETIME,
-    number_of_guests INT,
+    number_of_guests INT
 );
 
 CREATE TABLE Restaurant_Table(
-    id int AUTO_INCREMENT NOTNULL PRIMARY KEY,
+    id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     number_of_guests INT,
     restaurant_id int FOREIGN KEY REFERENCES Restaurant(id)
@@ -53,5 +55,24 @@ CREATE TABLE Employment(
 
 CREATE TABLE Employee_Position(
     id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
+    name VARCHAR(100) NOT NULL
 );
+SELECT Restaurant_Table.id, Restaurant_Table.name, Restaurant_Table.number_of_guests
+FROM Restaurant_Table;
+LEFT INNER JOIN baza2 ON Reservation.restaurant_table_id = Restaurant_Table.id;
+
+SELECT Reservation.restaurant_table_id, Restaurant_Table.id, Restaurant_Table.name, Restaurant_Table.number_of_guests
+FROM Restaurant_Table;
+INNER JOIN baza2 ON Reservation.restaurant_table_id = Restaurant_Table.id;
+GROUP BY Restaurant_Table.restaurant_id;
+
+SELECT * FROM Employee, Employment;
+INNER JOIN baza2 ON Employee.id = Employment.employee_id;
+
+SELECT * FROM Employee, Employee_Position, Employment;
+WHERE Employee.id = Employment.employee_id AND Employee_Position.name != 'Brak';
+
+--nie wiem co w tym
+
+SELECT * FROM Restaurant, Employee;
+CROSS JOIN ON Employment.employee_id = Employment.restaurant_id
