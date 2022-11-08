@@ -1,0 +1,12 @@
+SELECT id, nazwa, wystepowanie FROM Ryby;
+WHERE styl_zycia = 1;
+
+SELECT Ryby_id, wymiar_ochronny FROM Okres_ochronny 
+WHERE wymiar_ochronny < 30;
+
+SELECT Ryby.nazwa, Lowisko.akwen, Lowisko.wojewodztwo FROM Ryby, Lowisko
+CROSS JOIN ON Ryby.id = Lowisko.Ryby_id
+
+
+ALTER TABLE Ryby
+ADD COLOUMN dobowy_limit TINYINT;

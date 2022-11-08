@@ -1,0 +1,65 @@
+body {
+  width: 100vh;
+  height: 100vh;
+}
+
+div {
+  font-family: Helvetica;
+}
+
+.stopka,
+.baner {
+  background-color: #00838f;
+  color: white;
+  padding: 5px;
+  font-size: 130%;
+  text-align: center;
+}
+
+.blok_lewy {
+  background-color: #efefef;
+  width: 55%;
+}
+
+.blok_lewy1 {
+  height: 150px;
+  display: flex;
+}
+
+.blok_lewy2 {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.blok_prawy {
+  background-color: #4fb3bf;
+  width: 45%;
+  height: 450px;
+  text-align: center;
+}
+
+.blok_prawy img {
+  width: 400px;
+  box-shadow: 10px 10px 7px dimgray;
+  margin: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #4fb3bf;
+}
+
+table tr {
+  margin: auto;
+  width: 80%;
+}
+
+table th {
+  padding: 4px;
+}
+
+.left-bottom table td:hover {
+  background-color: #4fb3bf;
+}
