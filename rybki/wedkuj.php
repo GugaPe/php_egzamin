@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wędkowanie</title>
-  <link rel="stylesheet" href="./styl_1.css" />
+  <link rel="stylesheet" href="./style_1.css" />
 </head>
 <body>
   <div class="baner">
@@ -19,7 +19,7 @@
               <?php
                   include_once 'skrypt1.php';
                   
-                  skrypt1()
+                  skrypt1();
               ?>
         </ol>
       </div>
@@ -40,8 +40,12 @@
       </div>
     </div>
     <div class="blok_prawy">
-      <img src="./ryba1" alt="Sum" />
-      <a href="kwerendy.txt">Pobierz kwerendy</a>
+      <div>
+      <img src="./ryba1.jpg" alt="Sum" />
+      </div>
+      <div>
+      <a href="kwarendy.txt">Pobierz kwerendy</a>
+      </div>
     </div>
   </div>
   <div class="stopka">

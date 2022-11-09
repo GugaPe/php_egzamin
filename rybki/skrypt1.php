@@ -1,5 +1,5 @@
 <?php
-    function skrypt2() {
+    function skrypt1() {
         $link = mysqli_connect("localhost", "root", "", "wedkowanie");
  
         // Check connection
@@ -28,7 +28,4 @@
                 echo "No records matching your query were found.";
             }
         }
-        
-        // Close connection
-        mysqli_close($link);
 ?>

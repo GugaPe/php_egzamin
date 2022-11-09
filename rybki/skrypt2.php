@@ -34,7 +34,4 @@
                 echo "No records matching your query were found.";
             }
         }
-        
-        // Close connection
-        mysqli_close($link);
 ?>

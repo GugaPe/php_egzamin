@@ -1,9 +1,5 @@
 body {
-  width: 100vh;
-  height: 100vh;
-}
-
-div {
+  margin: 0;
   font-family: Helvetica;
 }
 
@@ -16,6 +12,10 @@ div {
   text-align: center;
 }
 
+.content {
+  display: flex;
+}
+
 .blok_lewy {
   background-color: #efefef;
   width: 55%;
@@ -24,6 +24,8 @@ div {
 .blok_lewy1 {
   height: 150px;
   display: flex;
+  display: flex;
+  flex-direction: column;
 }
 
 .blok_lewy2 {
@@ -32,11 +34,17 @@ div {
   flex-direction: column;
 }
 
+.blok_lewy2 table {
+  margin: auto;
+}
+
 .blok_prawy {
   background-color: #4fb3bf;
   width: 45%;
   height: 450px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .blok_prawy img {
