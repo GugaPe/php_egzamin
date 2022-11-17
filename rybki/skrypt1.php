@@ -1,31 +1,24 @@
 <?php
     function skrypt1() {
-        $link = mysqli_connect("localhost", "root", "", "wedkowanie");
+        $db = mysqli_connect("localhost", "root", "", "wedkowanie");
  
-        // Check connection
-        if ($link->connect_error) {
-            return $link->connect_error;
+        if ($db->connect_error) {
+            return $db->connect_error;
         }
         
-        // Attempt select query execution
-        $sql = "SELECT nazwa, akwen, wojewodztwo FROM Ryby LEFT JOIN Lowisko ON Ryby.id = Lowisko.ryby_id WHERE rodzaj = 3;";
-        $result = mysqli_query($link, $sql);
+        $query = "SELECT nazwa, akwen, wojewodztwo FROM Ryby LEFT JOIN Lowisko ON Ryby.id = Lowisko.ryby_id WHERE rodzaj = 3;";
+        $result = mysqli_query($db, $query);
         if (!$result) {
-            echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-        }
+            echo "ERROR: Could not able to execute $query. " . mysqli_error($db);
+        } else {
             if(mysqli_num_rows($result) > 0){
                 while($row = mysqli_fetch_array($result)){
-                    echo "
-                        <li>
-                            {$row['nazwa']} pływa w rzece 
-                            {$row['akwen']}, 
-                            {$row['wojewodztwo']}
-                        </li>";
+                    echo "<li>{$row['nazwa']} pływa w rzece {$row['akwen']}, {$row['wojewodztwo']}</li>";
                 }
-                // Free result set
                 mysqli_free_result($result);
             } else{
                 echo "No records matching your query were found.";
             }
         }
+    }
 ?>
