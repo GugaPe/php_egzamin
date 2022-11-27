@@ -18,16 +18,17 @@
       <div class="panel_prawy">
         <h4>U nas dobrze zjesz!</h4>
         <ol>
-          <li>Obiady od 40 zł</li>
-          <li>Przekąski od 10 zł</li>
-          <li>Kolacje od 20 zł</li>
+            <?php
+                require_once 'rezerwacja.php';
+                wczytaj("localhost", "root", "", "baza");
+            ?>
         </ol>
       </div>
     </div>
     <form class="panel_dolny" action="rezerwacje.php" method="POST">
       <h2>Zarezerwuj stolik on-line</h2>
       <p>Data (format rrrr-mm-dd):</p>
-      <!-- label zamiast p mozna uzyc -->
+      <!-- label zamiast p -->
       <input type="text" name="data_rez" id="data_rez" />
       <p>Ile osób?</p>
       <input type="number" name="liczba_osob" id="liczba_osob" />
@@ -37,9 +38,10 @@
         <input type="checkbox" />
         <p>Zgadzam się na przetwarzanie moich danych osobowych</p>
       </div>
-      <input class="button" type="reset" value="WYCZYŚĆ" />
-      <input class="button" type="submit" value="REZERWUJ" />
+      <input type="reset" placeholder="WYCZYŚĆ" />
+      <input type="submit" placeholder="REZERWUJ" />
     </form>
     <div class="stopka">Stronę internetową opracował: <i>00000000000</i></div>
+    <!-- italic =pochylenie -->
   </body>
 </html>
