@@ -29,6 +29,10 @@ body {
   padding: 30px;
 }
 
+.panel_dolny p {
+  margin: 0px;
+}
+
 .stopka {
   background-color: #2f180c;
   color: khaki;
