@@ -17,9 +17,9 @@
         <h3>Ryby zamieszkujące rzeki</h3>
         <ol>
               <?php
-                  include_once 'skrypt1.php';
-                  
-                  skrypt1();
+                include_once 'skrypt1.php';
+                $db = connect();
+                skrypt1($db);
               ?>
         </ol>
       </div>
@@ -32,9 +32,8 @@
               <th>Występowanie</th>
           </tr>
           <?php
-              include_once 'skrypt2.php';
-
-              skrypt2();
+              skrypt2($db);
+              disconnect($db);
           ?>
         </table>
       </div>

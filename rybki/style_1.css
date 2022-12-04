@@ -53,7 +53,6 @@ body {
   margin: 20px;
 }
 
-table,
 th,
 td {
   border: 1px solid #4fb3bf;
@@ -68,6 +67,12 @@ table th {
   padding: 4px;
 }
 
-.blok_lewy2 table td:hover {
+table {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #52b4bd;
+}
+
+.blok_lewy2 table tr:hover {
   background-color: #4fb3bf;
 }
