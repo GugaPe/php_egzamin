@@ -4,8 +4,9 @@
         $db = mysqli_connect("localhost", "root", "", "wedkowanie");
  
         if ($db->connect_error) {
-            return $db->connect_error;
+            echo "An error occurred while connecting to the database.";
         }
+        return $db;
     }
     function skrypt1($db) {
         
