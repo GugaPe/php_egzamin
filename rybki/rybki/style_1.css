@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: Helvetica;
+}
+
+.stopka,
+.baner {
+  background-color: #00838f;
+  color: white;
+  padding: 5px;
+  font-size: 130%;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+}
+
+.blok_lewy {
+  background-color: #efefef;
+  width: 55%;
+}
+
+.blok_lewy1 {
+  height: 150px;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.blok_lewy2 {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.blok_lewy2 table {
+  margin: auto;
+}
+
+.blok_prawy {
+  background-color: #4fb3bf;
+  width: 45%;
+  height: 450px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.blok_prawy img {
+  width: 400px;
+  box-shadow: 10px 10px 7px dimgray;
+  margin: 20px;
+}
+
+th,
+td {
+  border: 1px solid #4fb3bf;
+}
+
+table tr {
+  margin: auto;
+  width: 80%;
+}
+
+table th {
+  padding: 4px;
+}
+
+table {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #52b4bd;
+}
+
+.blok_lewy2 table tr:hover {
+  background-color: #4fb3bf;
+}
