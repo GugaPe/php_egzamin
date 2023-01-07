@@ -1,0 +1,11 @@
+SELECT nazwa FROM towary
+WHERE promocja = 1;
+
+SELECT cena FROM towary
+WHERE nazwa = 'cienkopis';
+
+SELECT dostawcy.nazwa, COUNT(towary.nazwa) FROM dostawcy, towary
+GROUP BY idDostawcy
+
+ALTER TABLE dostawcy
+ADD COLOUMN e_mail TEXT;
