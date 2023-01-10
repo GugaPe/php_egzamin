@@ -33,9 +33,12 @@
     padding: 10px;
 }
 
+ul {
+    background-color: #FFAA00;
+}
+
 li {
     padding-top: 30px;
-    background-color: #FFAA00;
 }
 
 img, h3 {
@@ -44,4 +47,9 @@ img, h3 {
 
 form {
     margin-bottom: 100px;
+}
+
+.contener {
+    display: flex;
+    flex-direction: row;
 }
